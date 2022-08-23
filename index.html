@@ -134,25 +134,25 @@
                     <h2 class="text-2xl font-bold text-center py-6">Budget</h2>
                     <div class="flex felx-row px-4">
                         <p class="font-semibold pr-3 ">Per Player</p>
-                        <input class="bg-black border-2 border-white w-6/12" type="">
+                        <input class="bg-black border-2 border-white w-6/12" id="player-field" type="text">
                     </div>
                     <div class="text-center pt-4 pl-4 pr-12">
-                        <button class="btn btn-primary w-full ">Calculate</button>
+                        <button id="btn-player-price" class="btn btn-primary w-full ">Calculate</button>
                     </div>
                     <div class="flex felx-row px-4 pt-6">
                         <p class="pr-8">Player Expenses</p>
-                        <p>$5000</p>
+                        <p>$<span id="player-expense">5000</span></p>
                     </div>
                     <div class="flex felx-row px-4 pt-3">
                         <p class="font-semibold pr-5 ">Manager</p>
-                        <input class="bg-black border-2 border-white w-6/12" type="">
+                        <input id="manager-field" class="bg-black border-2 border-white w-6/12" type="">
                     </div>
                     <div class="flex felx-row px-4 pt-3">
                         <p class="font-semibold pr-10 ">Coach</p>
-                        <input class="bg-black border-2 border-white w-6/12" type="">
+                        <input id="coach-field" class="bg-black border-2 border-white w-6/12" type="">
                     </div>
                     <div class="text-center pt-4 pl-4 pr-12">
-                        <button class="btn btn-primary w-full ">Calculate Total</button>
+                        <button id="btn-total-price" class="btn btn-primary w-full ">Calculate Total</button>
                     </div>
                     <div class="flex felx-row px-4 pt-6">
                         <p class="pr-8">Player Expenses</p>

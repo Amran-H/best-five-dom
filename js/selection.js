@@ -6,9 +6,10 @@ function display(cartPlayer) {
     const listItem = document.getElementById('cart-players');
     listItem.innerHTML = '';
 
-    for (let i = 0; i <= 4; i++) {
-        if (i > 5) {
-            alert("Hello! I am an alert box!!");
+    for (let i = 0; i <= 5; i++) {
+        if (i > 4) {
+            return alert("Maximun 5 players can be choosed!!");
+
         }
         const name = cartArray[i].playerName;
 
@@ -42,10 +43,39 @@ function addToCart(element) {
 }
 
 
+document.getElementById('btn-player-price').addEventListener('click', function () {
+    const playerField = document.getElementById('player-field');
+    const playerPrice = playerField.value;
 
-document.getElementById('player-btn').onclick = function () {
-    //disable
-    this.disabled = true;
+    const playerExpenseElement = document.getElementById('player-expense');
+    const playerExpense = playerExpenseElement.innerText;
+    playerExpenseElement.innerText = playerPrice * 5;
+    playerField.value = '';
+})
+document.getElementById('btn-total-price').addEventListener('click', function () {
+    const managerField = document.getElementById('manager-field');
+    const managerPrice = playerField.value;
+    const coachField = document.getElementById('coach-field');
+    const coachPrice = playerField.value;
 
-    //do some validation stuff
-}
+    const playerExpenseElement = document.getElementById('player-expense');
+    const playerExpense = playerExpenseElement.innerText;
+    playerExpenseElement.innerText = playerPrice * 5;
+    playerField.value = '';
+})
+
+
+
+
+
+
+
+
+
+
+// document.getElementById('player-btn').onclick = function () {
+//     //disable
+//     this.disabled = true;
+
+//     //do some validation stuff
+// }
