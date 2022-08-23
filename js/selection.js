@@ -6,8 +6,8 @@ function display(cartPlayer) {
     const listItem = document.getElementById('cart-players');
     listItem.innerHTML = '';
 
-    for (let i = 0; i <= 5; i++) {
-        if (i > 4) {
+    for (let i = 0; i <= cartPlayer.length; i++) {
+        if (i > 5) {
             return alert("Maximun 5 players can be choosed!!");
 
         }
@@ -35,9 +35,9 @@ function addToCart(element) {
     const playerName = element.parentNode.parentNode.children[0].innerText;
 
 
-    const productobj = { playerName: playerName }
+    const player = { playerName: playerName }
 
-    cartArray.push(productobj);
+    cartArray.push(player);
 
     display(cartArray);
 }
@@ -65,24 +65,14 @@ document.getElementById('btn-player-price').addEventListener('click', function (
         const totalExpenseElement = document.getElementById('total-expense');
         const totalExpenseString = totalExpenseElement.innerText;
         totalExpenseElement.innerText = managerPrice + coachPrice + playerExpense;
-        // const totalExpense = parseInt(totalExpenseString);
-        // playerField.value = '';
+        const totalExpense = parseInt(totalExpenseString);
     })
 })
 
 
+document.getElementById('player-btn').onclick = function () {
+    //disable
+    this.disabled = true;
 
-
-
-
-
-
-
-
-
-// document.getElementById('player-btn').onclick = function () {
-//     //disable
-//     this.disabled = true;
-
-//     //do some validation stuff
-// }
+    //do some validation stuff
+}
