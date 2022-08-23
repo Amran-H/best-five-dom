@@ -45,6 +45,7 @@ function addToCart(element) {
 
 document.getElementById('btn-player-price').addEventListener('click', function () {
     const playerField = document.getElementById('player-field');
+
     const playerPrice = playerField.value;
 
     const playerExpenseElement = document.getElementById('player-expense');
@@ -70,9 +71,3 @@ document.getElementById('btn-player-price').addEventListener('click', function (
 })
 
 
-document.getElementById('player-btn').onclick = function () {
-    //disable
-    this.disabled = true;
-
-    //do some validation stuff
-}
