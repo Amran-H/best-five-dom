@@ -48,21 +48,28 @@ document.getElementById('btn-player-price').addEventListener('click', function (
     const playerPrice = playerField.value;
 
     const playerExpenseElement = document.getElementById('player-expense');
-    const playerExpense = playerExpenseElement.innerText;
-    playerExpenseElement.innerText = playerPrice * 5;
-    playerField.value = '';
-})
-document.getElementById('btn-total-price').addEventListener('click', function () {
-    const managerField = document.getElementById('manager-field');
-    const managerPrice = playerField.value;
-    const coachField = document.getElementById('coach-field');
-    const coachPrice = playerField.value;
+    playerExpenseElement.innerText = playerPrice * cartArray.length;
+    const playerExpenseString = playerExpenseElement.innerText;
+    const playerExpense = parseInt(playerExpenseString);
+    // playerField.value = '';
 
-    const playerExpenseElement = document.getElementById('player-expense');
-    const playerExpense = playerExpenseElement.innerText;
-    playerExpenseElement.innerText = playerPrice * 5;
-    playerField.value = '';
+    document.getElementById('btn-total-price').addEventListener('click', function () {
+        const managerField = document.getElementById('manager-field');
+        const managerPriceString = managerField.value;
+        const managerPrice = parseInt(managerPriceString);
+        const coachField = document.getElementById('coach-field');
+        const coachPriceString = coachField.value;
+        const coachPrice = parseInt(coachPriceString);
+
+
+        const totalExpenseElement = document.getElementById('total-expense');
+        const totalExpenseString = totalExpenseElement.innerText;
+        totalExpenseElement.innerText = managerPrice + coachPrice + playerExpense;
+        // const totalExpense = parseInt(totalExpenseString);
+        // playerField.value = '';
+    })
 })
+
 
 
 
